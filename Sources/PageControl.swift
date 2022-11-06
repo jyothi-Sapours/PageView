@@ -68,12 +68,51 @@ public enum PageControl {
         public let theme: PageControlTheme
         
         public var body: some View {
+            let dotTypes:[DotType]  = theme.dotTypes ?? []
             ForEach(0..<pageCount) { (i) in
-                 Circle()
-                     .frame(width: self.theme.dotSize, height: self.theme.dotSize)
-                     .foregroundColor(self.dotColor(index: i))
+                if(dotTypes.count == 0){
+                    Circle()
+                        .frame(width: self.theme.dotSize, height: self.theme.dotSize)
+                        .foregroundColor(self.dotColor(index: i))
+                }else{
+                    if(dotTypes[i] == .normal){
+                        Circle()
+                            .frame(width: self.theme.dotSize, height: self.theme.dotSize)
+                            .foregroundColor(self.dotColor(index: i))
+                    }else{
+                        if(i == selectedPage){
+                            activeVideo
+                        }else{
+                            inActiveVideo
+                        }
+                    }
+                }
              }
         }
+        
+        var activeVideo: some View {
+            HStack{
+                Polygon(sides: 3, angle:1)
+                    .fill(Color.black)
+                    .frame(width: 14, height: 14)
+            }
+        }
+        
+        var inActiveVideo: some View {
+            HStack{
+                Polygon(sides: 3, angle:1)
+                    .fill(Color.gray)
+                    .frame(width: 14, height: 14)
+            }
+        }
+        
+//        public func videoIcon(index:Int) -> Polygon {
+//            if(index == selectedPage){
+//                return Polygon(sides: 3, angle: 90).frame(wi)
+//            }else{
+//                return Polygon(sides: 3, angle: 90)
+//            }
+//        }
         
         private func dotColor(index: Int) -> Color {
             if index == selectedPage {

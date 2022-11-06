@@ -21,6 +21,8 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		042CA4A12917B1AE00339114 /* DotType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042CA4A02917B1AE00339114 /* DotType.swift */; };
+		042CA4A32917B41600339114 /* Polygon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042CA4A22917B41600339114 /* Polygon.swift */; };
 		OBJ_31 /* PageContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_8 /* PageContent.swift */; };
 		OBJ_32 /* PageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* PageControl.swift */; };
 		OBJ_33 /* PageControlTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* PageControlTheme.swift */; };
@@ -52,6 +54,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		042CA4A02917B1AE00339114 /* DotType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotType.swift; sourceTree = "<group>"; };
+		042CA4A22917B41600339114 /* Polygon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Polygon.swift; sourceTree = "<group>"; };
 		OBJ_10 /* PageControlTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageControlTheme.swift; sourceTree = "<group>"; };
 		OBJ_11 /* PageGestureType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageGestureType.swift; sourceTree = "<group>"; };
 		OBJ_12 /* PageScrollState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageScrollState.swift; sourceTree = "<group>"; };
@@ -116,7 +120,7 @@
 			name = Products;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		OBJ_5 /*  */ = {
+		OBJ_5 = {
 			isa = PBXGroup;
 			children = (
 				OBJ_6 /* Package.swift */,
@@ -128,7 +132,6 @@
 				OBJ_24 /* LICENSE */,
 				OBJ_25 /* README.md */,
 			);
-			name = "";
 			sourceTree = "<group>";
 		};
 		OBJ_7 /* Sources */ = {
@@ -141,6 +144,8 @@
 				OBJ_12 /* PageScrollState.swift */,
 				OBJ_13 /* PageView.swift */,
 				OBJ_14 /* PageViewBuilder.swift */,
+				042CA4A02917B1AE00339114 /* DotType.swift */,
+				042CA4A22917B41600339114 /* Polygon.swift */,
 			);
 			path = Sources;
 			sourceTree = SOURCE_ROOT;
@@ -211,7 +216,7 @@
 			knownRegions = (
 				en,
 			);
-			mainGroup = OBJ_5 /*  */;
+			mainGroup = OBJ_5;
 			productRefGroup = OBJ_19 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -234,6 +239,8 @@
 				OBJ_33 /* PageControlTheme.swift in Sources */,
 				OBJ_34 /* PageGestureType.swift in Sources */,
 				OBJ_35 /* PageScrollState.swift in Sources */,
+				042CA4A32917B41600339114 /* Polygon.swift in Sources */,
+				042CA4A12917B1AE00339114 /* DotType.swift in Sources */,
 				OBJ_36 /* PageView.swift in Sources */,
 				OBJ_37 /* PageViewBuilder.swift in Sources */,
 			);

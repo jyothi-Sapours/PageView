@@ -343,9 +343,21 @@ struct PageView_Previews: PreviewProvider {
                 .foregroundColor(.gray)
         }
 
-        var theme = PageControlTheme.default
-        theme.alignment = Alignment(horizontal: .center, vertical: .bottom)
-        theme.yOffset = -14
+        var theme  = PageControlTheme(
+            backgroundColor: .white,
+            dotActiveColor: .black,
+            dotInactiveColor: .gray,
+            dotSize: 10.0,
+            spacing: 12.0,
+            padding: 5.0,
+              xOffset: 8.0,
+            yOffset: -14,
+            opacity: 0.5,
+            alignment: Alignment(horizontal: .center, vertical: .bottom),
+            dotTypes: [.normal,.video]
+        )//PageControlTheme.default
+        //theme.alignment = Alignment(horizontal: .center, vertical: .bottom)
+        //theme.yOffset = -14
 
         var pageIndex = 0
         let pageBinding = Binding(get: {

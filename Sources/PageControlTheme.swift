@@ -8,6 +8,7 @@
 import SwiftUI
 
 public struct PageControlTheme {
+    
     public var backgroundColor: Color
     public var dotActiveColor: Color
     public var dotInactiveColor: Color
@@ -18,6 +19,7 @@ public struct PageControlTheme {
     public var yOffset: CGFloat
     public var opacity: Double
     public var alignment: Alignment?
+    public var dotTypes:[DotType]?
     
     public init(
         backgroundColor: Color,
@@ -43,6 +45,32 @@ public struct PageControlTheme {
         self.alignment = alignment
     }
     
+    public init(
+        backgroundColor: Color,
+        dotActiveColor: Color,
+        dotInactiveColor: Color,
+        dotSize: CGFloat,
+        spacing: CGFloat,
+        padding: CGFloat,
+        xOffset: CGFloat,
+        yOffset: CGFloat,
+        opacity: Double = 1.0,
+        alignment: Alignment? = nil,
+        dotTypes:[DotType]
+    ) {
+        self.backgroundColor = backgroundColor
+        self.dotActiveColor = dotActiveColor
+        self.dotInactiveColor = dotInactiveColor
+        self.dotSize = dotSize
+        self.spacing = spacing
+        self.padding = padding
+        self.xOffset = xOffset
+        self.yOffset = yOffset
+        self.opacity = opacity
+        self.alignment = alignment
+        self.dotTypes = dotTypes
+    }
+    
     public static var invisible: PageControlTheme {
         return PageControlTheme(
             backgroundColor: .clear,
@@ -54,7 +82,8 @@ public struct PageControlTheme {
             xOffset: .zero,
             yOffset: .zero,
             opacity: .zero,
-            alignment: nil
+            alignment: nil,
+            dotTypes:[]
         )
     }
     
@@ -70,7 +99,8 @@ public struct PageControlTheme {
                 xOffset: 12.0,
                 yOffset: -12.0,
                 opacity: 1.0,
-                alignment: nil
+                alignment: nil,
+                dotTypes:[]
             )
         #elseif os(watchOS)
             return PageControlTheme(
@@ -83,7 +113,8 @@ public struct PageControlTheme {
                 xOffset: 0.0,
                 yOffset: 0.0,
                 opacity: 1.0,
-                alignment: nil
+                alignment: nil,
+                dotTypes:[]
             )
         #else
             return PageControlTheme(
@@ -96,7 +127,8 @@ public struct PageControlTheme {
                 xOffset: 16.0,
                 yOffset: -16.0,
                 opacity: 1.0,
-                alignment: nil
+                alignment: nil,
+                dotTypes:[]
             )
         #endif
     }
